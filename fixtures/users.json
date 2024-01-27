@@ -1,0 +1,16 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$qMZbCU0w72H5TBi8bqWLac$XMCYjE4btwwyc0T8AaiRlrRpauYTV2RSrUPbHjDg8U8=",
+      "last_login": null,
+      "first_name": "test",
+      "last_name": "test",
+      "email": "skytest@mail.ru",
+      "role": "admin",
+      "image": "",
+      "is_active": true
+    }
+  }
+]

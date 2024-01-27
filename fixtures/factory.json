@@ -1,0 +1,68 @@
+[
+  {
+    "model": "factory.factory",
+    "pk": 1,
+    "fields": {
+      "name": "test",
+      "email": "test@mail.ru",
+      "country": "test",
+      "city": "test",
+      "street": "test",
+      "house_number": "test",
+      "created_at": "2024-01-27T12:04:06.478Z"
+    }
+  },
+  {
+    "model": "factory.factory",
+    "pk": 2,
+    "fields": {
+      "name": "test 2",
+      "email": "test2@mail.ru",
+      "country": "test2",
+      "city": "test2",
+      "street": "test2",
+      "house_number": "test2",
+      "created_at": "2024-01-27T12:04:31.323Z"
+    }
+  },
+  {
+    "model": "factory.retailnetwork",
+    "pk": 1,
+    "fields": {
+      "name": "test",
+      "email": "test@mail.ru",
+      "country": "test",
+      "city": "test",
+      "street": "test",
+      "house_number": "test",
+      "parent": 2,
+      "created_at": "2024-01-27T12:05:20.847Z"
+    }
+  },
+  {
+    "model": "factory.individualentrepreneur",
+    "pk": 1,
+    "fields": {
+      "name": "test",
+      "email": "test@mail.ru",
+      "country": "test",
+      "city": "test",
+      "street": "test",
+      "house_number": "test",
+      "parent": null,
+      "created_at": "2024-01-27T12:04:50.225Z"
+    }
+  },
+  {
+    "model": "factory.product",
+    "pk": 1,
+    "fields": {
+      "name": "test",
+      "model": "test",
+      "release_date": "2024-01-27",
+      "supplier": 2,
+      "debt_to_supplier": "39000.00",
+      "created_at": "2024-01-27T12:05:05.346Z"
+    }
+  }
+]
