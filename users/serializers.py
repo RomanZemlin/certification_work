@@ -1,6 +1,6 @@
+from django.contrib.auth.hashers import make_password
 from rest_framework import serializers
 from .models import User
-import bcrypt
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -15,7 +15,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         password = validated_data.pop('password')
-        hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+        hashed_password = make_password(password)
         user = User.objects.create(password=hashed_password, **validated_data)
         return user
 

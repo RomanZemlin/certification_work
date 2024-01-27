@@ -7,7 +7,6 @@ from .serializers import UserSerializer
 class UserListCreateAPIView(ListCreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = [IsAuthenticated]
 
 
 class UserRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
