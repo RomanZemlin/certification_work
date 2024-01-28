@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'rest_framework.authtoken',
+    "djoser",
     'drf_yasg',
     'rest_framework',
     'rest_framework_simplejwt',
@@ -133,10 +135,7 @@ AUTH_USER_MODEL = 'users.User'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication',
-    ],
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
 }
 
@@ -154,4 +153,11 @@ SWAGGER_SETTINGS = {
             'in': 'header'
         },
     },
+}
+
+DJOSER = {
+    # другие настройки
+    'LOGIN_FIELD': 'email',
+    'PASSWORD_RESET_CONFIRM_URL': '#/password/reset/confirm/{uid}/{token}',
+    'TOKEN_AUTHENTICATION_RULE': 'rest_framework_simplejwt.authentication.JWTTokenUserAuthentication',
 }
